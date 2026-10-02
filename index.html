@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pink House - One-stop youth shop, Baktouk Phnom Penh</title>
+<meta name="description" content="The biggest and No.1 one-stop shop for youth's consumer products. Bags, souvenirs, jewelry and beauty products in Phnom Penh. Pink House, Baktouk.">
+<meta name="theme-color" content="#0E0E10">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Pink House - One-stop youth shop, Baktouk Phnom Penh">
+<meta property="og:description" content="One-stop shop for youth's consumer products. Bags, souvenirs, jewelry and beauty in Phnom Penh.">
+<meta property="og:image" content="assets/sacoche-green.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/sacoche-green.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#shop">Skip to shop</a>
+
+<!-- Brand mark. Hand-drawn vector by request: redraws the shop's house + bow + heart logo
+     so it scales and recolours on the dark canvas. Referenced twice via <use>. -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <g id="mark" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 55 L50 24 L84 55"/>
+      <path d="M26 53 V80 Q26 87 33 87 H67 Q74 87 74 80 V53"/>
+      <path d="M42 87 V68 Q42 59 50 59 Q58 59 58 68 V87"/>
+      <path d="M46 20 C38 10 28 11 27 18 C26 25 35 28 46 25"/>
+      <path d="M54 20 C62 10 72 11 73 18 C74 25 65 28 54 25"/>
+      <path d="M45 27 C43 33 40 37 37 42"/>
+      <path d="M55 27 C57 33 60 37 63 42"/>
+      <circle cx="50" cy="22.5" r="4.5"/>
+      <path d="M50 51 C44 46 40.5 43 40.5 39.5 C40.5 36.8 42.5 35 45 35 C46.9 35 48.6 36 50 38 C51.4 36 53.1 35 55 35 C57.5 35 59.5 36.8 59.5 39.5 C59.5 43 56 46 50 51 Z" fill="currentColor" stroke-width="2"/>
+    </g>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top">
+    <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#mark"/></svg>
+    <span class="brand-text">
+      <strong>PINK HOUSE</strong>
+      <small>ផ្ទះផ្កាឈូក</small>
+    </span>
+  </a>
+
+  <nav class="nav-links" aria-label="Page sections">
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="cart-btn" id="openDrawer" aria-haspopup="dialog" aria-expanded="false">
+    Selection <span class="badge" id="count">0</span>
+  </button>
+
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>
+        <span class="line"><span>Bags to beauty.</span></span>
+        <span class="line"><span class="hot">One shop.</span></span>
+      </h1>
+      <p class="lede">
+        The biggest and No.1 one-stop shop for youth's consumer products.
+        Bags, souvenirs, jewelry and beauty products in Phnom Penh.
+      </p>
+      <a class="btn" href="#shop">Browse the shop</a>
+    </div>
+
+    <figure class="hero-art">
+      <img src="assets/sacoche-green.jpg"
+           alt="Black LEEMONO flat sacoche with a neon green paracord zip pull"
+           width="1152" height="1250" fetchpriority="high" decoding="async">
+    </figure>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-set">
+        <span>LEEMONO</span><span>MINDESA</span><span>WATER REPELLENT NYLON</span><span>$9 TO $13</span><span>BAKTOUK, PHNOM PENH</span>
+      </div>
+      <div class="ticker-set">
+        <span>LEEMONO</span><span>MINDESA</span><span>WATER REPELLENT NYLON</span><span>$9 TO $13</span><span>BAKTOUK, PHNOM PENH</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="shop" id="shop">
+    <div class="shop-head reveal">
+      <h2>The shop</h2>
+      <p>Tap any bag to add it to your selection, then send us the list on Telegram or Facebook.</p>
+    </div>
+
+    <div class="filters reveal" role="group" aria-label="Filter products by category">
+      <button class="pill is-on" data-filter="all" aria-pressed="true">All <span class="n">9</span></button>
+      <button class="pill" data-filter="crossbody" aria-pressed="false">Crossbody <span class="n">5</span></button>
+      <button class="pill" data-filter="travel" aria-pressed="false">Travel <span class="n">2</span></button>
+      <button class="pill" data-filter="backpack" aria-pressed="false">Backpacks <span class="n">2</span></button>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <article class="card reveal wide" data-cat="crossbody" style="--cord:#A87BFF">
+        <div class="shot">
+          <img src="assets/shoulder-flap-grey.jpg" alt="Grey LEEMONO flap shoulder bag with a purple paracord pull" loading="lazy" decoding="async">
+          <img class="alt" src="assets/shoulder-flap-trio.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">LEEMONO</p>
+            <h3>Flap Shoulder Bag</h3>
+            <p class="variant">Black, Grey, Charcoal</p>
+          </div>
+          <div class="tags"><span class="price">$10.50</span><span class="sku">KTM16883-43</span></div>
+        </div>
+        <button class="add" data-name="Flap Shoulder Bag" data-sku="KTM16883-43" data-price="10.50">
+          Add Flap Shoulder Bag to selection
+        </button>
+      </article>
+
+      <article class="card reveal" data-cat="crossbody" style="--cord:#FFB020">
+        <div class="shot">
+          <img src="assets/sacoche-orange.jpg" alt="Black LEEMONO flat sacoche with an orange paracord pull and wide webbing strap" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">LEEMONO</p>
+            <h3>Flat Sacoche</h3>
+            <p class="variant">Black, lime or orange pull</p>
+          </div>
+          <div class="tags"><span class="price">$13.00</span><span class="sku">KTM16832-48</span></div>
+        </div>
+        <button class="add" data-name="Flat Sacoche" data-sku="KTM16832-48" data-price="13.00">
+          Add Flat Sacoche to selection
+        </button>
+      </article>
+
+      <article class="card reveal" data-cat="crossbody" style="--cord:#FFB020">
+        <div class="shot">
+          <img src="assets/messenger-black.jpg" alt="Black LEEMONO flap messenger bag with an orange paracord pull" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">LEEMONO</p>
+            <h3>Flap Messenger</h3>
+            <p class="variant">Black, buckle front</p>
+          </div>
+          <div class="tags"><span class="price">$11.50</span><span class="sku">KTM16881-46</span></div>
+        </div>
+        <button class="add" data-name="Flap Messenger" data-sku="KTM16881-46" data-price="11.50">
+          Add Flap Messenger to selection
+        </button>
+      </article>
+
+      <article class="card reveal" data-cat="travel" style="--cord:#4DE8C2">
+        <div class="shot">
+          <img src="assets/travel-tote-black.jpg" alt="Black MINDESA travel tote with twin webbing handles" loading="lazy" decoding="async">
+          <img class="alt" src="assets/travel-tote-grey.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">MINDESA</p>
+            <h3>Travel Tote</h3>
+            <p class="variant">Black, Dark Grey</p>
+          </div>
+          <div class="tags"><span class="price">$11.80</span><span class="sku">KTM16875-45</span></div>
+        </div>
+        <button class="add" data-name="Travel Tote" data-sku="KTM16875-45" data-price="11.80">
+          Add Travel Tote to selection
+        </button>
+      </article>
+
+      <article class="card reveal" data-cat="travel" style="--cord:#4DE8C2">
+        <div class="shot">
+          <img src="assets/shopper-navy.jpg" alt="Navy MINDESA shopper tote with six outer pockets" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">MINDESA</p>
+            <h3>Pocket Shopper</h3>
+            <p class="variant">Navy</p>
+          </div>
+          <div class="tags"><span class="price">$12.80</span><span class="sku">KTM16856-49</span></div>
+        </div>
+        <button class="add" data-name="Pocket Shopper" data-sku="KTM16856-49" data-price="12.80">
+          Add Pocket Shopper to selection
+        </button>
+      </article>
+
+      <article class="card reveal wide" data-cat="crossbody" style="--cord:#C8FF3D">
+        <div class="shot">
+          <img src="assets/shoulder-snap-duo.jpg" alt="Tan and black snap flap shoulder bags with lime and yellow paracord pulls" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">LEEMONO</p>
+            <h3>Snap Flap Shoulder</h3>
+            <p class="variant">Tan, Black</p>
+          </div>
+          <div class="tags"><span class="price">$9.00</span><span class="sku">KTM16882-36</span></div>
+        </div>
+        <button class="add" data-name="Snap Flap Shoulder" data-sku="KTM16882-36" data-price="9.00">
+          Add Snap Flap Shoulder to selection
+        </button>
+      </article>
+
+      <article class="card reveal" data-cat="backpack" style="--cord:#FF2D78">
+        <div class="shot">
+          <img src="assets/backpack-classic-black.jpg" alt="Black MINDESA backpack with three front zip pockets" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">MINDESA</p>
+            <h3>Classic Backpack</h3>
+            <p class="variant">Black, three front zips</p>
+          </div>
+          <div class="tags"><span class="price ask">Ask for price</span></div>
+        </div>
+        <button class="add" data-name="Classic Backpack" data-sku="" data-price="">
+          Add Classic Backpack to selection
+        </button>
+      </article>
+
+      <article class="card reveal" data-cat="backpack" style="--cord:#A87BFF">
+        <div class="shot">
+          <img src="assets/backpack-tote-grey.jpg" alt="Charcoal tote backpack printed with the words Anyone Can Be Anything" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">Pink House</p>
+            <h3>Tote Backpack</h3>
+            <p class="variant">Charcoal, carry or wear</p>
+          </div>
+          <div class="tags"><span class="price ask">Ask for price</span></div>
+        </div>
+        <button class="add" data-name="Tote Backpack" data-sku="" data-price="">
+          Add Tote Backpack to selection
+        </button>
+      </article>
+
+      <article class="card reveal wide" data-cat="crossbody" style="--cord:#FF2D78">
+        <div class="shot">
+          <img src="assets/barrel-black.jpg" alt="Black barrel crossbody bag with twin end zips and a webbing strap" loading="lazy" decoding="async">
+        </div>
+        <div class="meta">
+          <div>
+            <p class="maker">LEEMONO</p>
+            <h3>Barrel Crossbody</h3>
+            <p class="variant">Black, twin end zips</p>
+          </div>
+          <div class="tags"><span class="price">$9.50</span><span class="sku">KTM16885-38</span></div>
+        </div>
+        <button class="add" data-name="Barrel Crossbody" data-sku="KTM16885-38" data-price="9.50">
+          Add Barrel Crossbody to selection
+        </button>
+      </article>
+
+    </div>
+
+    <p class="grid-empty" id="gridEmpty" hidden>Nothing in this category yet. Try another filter.</p>
+  </section>
+
+  <section class="about reveal" id="about">
+    <h2>A small shop in Baktouk</h2>
+    <p>
+      We stock nylon bags that survive a Phnom Penh rainy season. Water-repellent shells,
+      heavy webbing straps, honest zips. No showroom markup and no pre-orders. What you see
+      is what is on the shelf, and when it is gone it is gone.
+    </p>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#mark"/></svg>
+      <div>
+        <strong>PINK HOUSE</strong>
+        <small>ផ្ទះផ្កាឈូក</small>
+      </div>
+    </div>
+
+    <address class="foot-where">
+      Baktouk, Phnom Penh<br>
+      Open daily
+    </address>
+
+    <nav class="foot-social" aria-label="Social">
+      <a href="https://t.me/PLACEHOLDER" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://facebook.com/PLACEHOLDER" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+  </div>
+  <p class="copy">&copy; <span id="year">2026</span> Pink House Baktouk</p>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+  <header class="drawer-head">
+    <h2 id="drawerTitle">Your selection</h2>
+    <button class="icon-btn" id="closeDrawer" aria-label="Close selection">&#10005;</button>
+  </header>
+
+  <div class="drawer-body">
+    <ul class="drawer-list" id="drawerList"></ul>
+    <p class="drawer-empty" id="drawerEmpty">
+      Nothing picked yet.<br>Tap a bag in the shop to start a list.
+    </p>
+  </div>
+
+  <footer class="drawer-foot">
+    <div class="total-row">
+      <span>Subtotal</span>
+      <strong id="total">$0.00</strong>
+    </div>
+    <p class="fineprint">Items without a listed price are not counted. We confirm the final total in chat.</p>
+    <button class="btn send" id="sendTelegram" data-link="https://t.me/PLACEHOLDER">Send on Telegram</button>
+    <button class="btn send ghost" id="sendFacebook" data-link="https://facebook.com/PLACEHOLDER">Send on Facebook</button>
+  </footer>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
