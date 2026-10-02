@@ -42,7 +42,9 @@ body{
   font-size: 16px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  /* clip, not hidden: hidden makes body a scroll container on iOS Safari,
+     which breaks position:sticky on the nav. */
+  overflow-x: clip;
 }
 
 body.locked{ overflow: hidden; }
@@ -494,6 +496,18 @@ footer{
   .tags{ flex-direction:row; align-items:center; gap:.7rem; }
   .price{ font-size:.9rem; }
   .sku{ display:none; }
+
+  /* One scrollable row beats two wrapped rows: the grid stays where the
+     thumb expects it. Bleeds to the screen edge so the cut-off pill reads
+     as scrollable. */
+  .filters{
+    flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    margin-inline: calc(var(--pad) * -1);
+    padding-inline: var(--pad);
+  }
+  .filters::-webkit-scrollbar{ display:none; }
+  .pill{ flex:none; }
 
   .hero{ padding-bottom:2rem; }
   .hero-art img{ max-height: 48dvh; }
